@@ -1,0 +1,25 @@
+/* Tag filter
+   ========================================================================== */
+.tags-filter {
+  margin-bottom: 25px;
+}
+
+.tags-filter__item {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 17px;
+  line-height: 15px;
+  color: #92A4B1;
+  border: 1px solid $purple;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: color .3s, background .3s;
+
+  &:hover {
+    background-color: $purple;
+    color: #FFFFFF;
+  }
+}
+
+/* Tag on cards
+   ========================================================================== */

@@ -1,24 +1,24 @@
 'use strict'
 const WebpackDevServer = require('webpack-dev-server')
 const webpack = require('webpack')
-const webpack_dev = require('./webpack.dev')
+const webpackDev = require('./webpack.dev')
 const config = require('./config')
-const compiler = webpack(webpack_dev)
+const compiler = webpack(webpackDev)
 const hotMiddleware = require('webpack-hot-middleware')(compiler)
 const chokidar = require('chokidar')
 
 // Force le rafraichissement du navigateur
 let refresh = function (path) {
   console.log('* ' + path + ' changed')
-  hotMiddleware.publish({ action: 'reload' })
+  hotMiddleware.publish({action: 'reload'})
 }
 
 let server = new WebpackDevServer(compiler, {
   hot: true,
   historyApiFallback: config.historyApiFallback,
-  quiet: false,
+  quiet: true,
   noInfo: false,
-  publicPath: webpack_dev.output.publicPath,
+  publicPath: webpackDev.output.publicPath,
   stats: {
     colors: true,
     chunks: false

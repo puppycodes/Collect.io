@@ -1,0 +1,42 @@
+/* Collection
+   ========================================================================== */
+.collection {
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 233px;
+  height: 162px;
+  background: url(img/directory.svg) no-repeat;
+  position: relative;
+}
+
+.collection__name {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.collection__icon {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(img/icons/directory.svg) no-repeat;
+  margin-right: 8px;
+}
+
+.collection__letter {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #4e575d;
+  font-family: "Josefin Sans";
+  font-size: 120px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: .9em;
+}

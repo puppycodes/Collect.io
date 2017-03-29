@@ -1,0 +1,18 @@
+.cards {
+  column-count: 6;
+  column-gap: 20px;
+}
+
+.card {
+  break-inside: avoid-column;
+  background-color: #FFFFFF;
+  padding: 17px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.card__header {
+  font-size: 12px;
+  color: #0e2639;
+  margin-bottom: 1.7rem;
+}
