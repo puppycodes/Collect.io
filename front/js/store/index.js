@@ -6,9 +6,21 @@ import collections from './modules/collections'
 
 Vue.use(Vuex)
 
+const state = {
+  modal: false
+}
+
+const mutations = {
+  SET_MODAL: (state, name) => {
+    state.modal = name
+  }
+}
+
 export default new Vuex.Store({
-  actions: actions,
-  getters: getters,
+  state,
+  actions,
+  getters,
+  mutations,
   modules: {
     collections
   }

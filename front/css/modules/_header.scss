@@ -33,7 +33,28 @@ $header_height: 71px;
   border-bottom: 3px solid #7B80DE;
 }
 
+.header__actions {
+  float: left;
+  padding: 21px 30px;
+
+  button,
+  a {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background-size: 29px 29px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.header__actions__link {
+  background-image: url(img/icons/add-link.png);
+}
+
 .header__profile {
+  float: right;
   padding: 0 45px;
   height: $header_height;
   line-height: $header_height;

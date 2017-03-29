@@ -5,6 +5,7 @@ $purple: #7b80de;
 
 /* MISC
    ========================================================================== */
+@import "tools/reset";
 @import "tools/helpers";
 @import "tools/responsive";
 
@@ -32,6 +33,7 @@ body {
 @import "modules/card";
 @import "modules/collection";
 @import "modules/tag";
+@import "modules/modal";
 
 /* Pages
    ========================================================================== */

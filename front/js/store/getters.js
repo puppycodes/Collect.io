@@ -1,1 +1,1 @@
-export const caaollections = state => state.collections
+export const modal = state => state.modal
