@@ -5,12 +5,10 @@
       <div class="tags-filter__item">Edit Tag</div>
     </div>
     <div class="cards">
-      <div class="card" v-for="n in 10">
-        <div class="card__header"><img src="/static/twitter.png" alt=""> Twitter.com</div>
+      <div class="card" v-for="element in inbox">
+        <div class="card__header"><icon name="note"></icon> {{ element.name }}</div>
         <div class="card__body">
-            <span v-for="k in n">
-              Open source bookmark manager. Manage your inspiration
-            </span>
+          {{ element.content }}
         </div>
       </div>
     </div>
@@ -18,6 +16,15 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
+  import Icon from '../components/Icon'
+
   export default {
+    computed: {
+      ...mapGetters(['inbox'])
+    },
+    components: {
+      Icon
+    }
   }
 </script>

@@ -3,7 +3,7 @@ $header_height: 71px;
 .header {
   display: flex;
   height: $header_height;
-  background-color: #FFFFFF;
+  background-color: #FFF;
   align-items: center;
   justify-content: space-between;
 }
@@ -60,7 +60,7 @@ $header_height: 71px;
   line-height: $header_height;
   background-color: $purple;
   font-size: 13px;
-  color: #FFFFFF;
+  color: #FFF;
   cursor: pointer;
 }
 

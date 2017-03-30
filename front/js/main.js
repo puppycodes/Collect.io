@@ -5,6 +5,9 @@ import Inbox from './pages/Inbox'
 import store from './store'
 import Collections from './pages/Collections'
 
+// Global Components
+import Icon from './components/Icon'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,5 +22,8 @@ new Vue({
   router,
   store,
   el: '#app',
+  components: {
+    icon: Icon
+  },
   render: h => h(App)
 })

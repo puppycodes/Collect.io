@@ -6,6 +6,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin')
 const ExtractCSSPlugin = require('./extractCSSPlugin')
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const postcss = {
   plugins: [
@@ -49,7 +50,7 @@ let webpack_base = {
       // Loaders
       {
         test: /\.(ts|tsx)$/,
-        use: ['./build/vue-ts-loader', 'awesome-typescript-loader']
+        use: ['awesome-typescript-loader']
       },
       {
         test: /\.js$/,
@@ -88,6 +89,7 @@ let webpack_base = {
     ]
   },
   plugins: [
+    // new BundleAnalyzerPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: postcss,

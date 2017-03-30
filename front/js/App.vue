@@ -16,7 +16,7 @@
         </div>
         <div class="header__profile">
           <img class="header__avatar" src="/static/avatar.png">
-          {{ modal }}
+          Adrien
         </div>
       </div>
     </header>
@@ -34,9 +34,12 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'app',
   computed: mapGetters(['modal']),
-  methods: mapActions(['openModal']),
+  methods: mapActions(['openModal', 'loadInbox']),
   components: {
     modalLink
+  },
+  mounted () {
+    this.loadInbox()
   }
 }
 </script>

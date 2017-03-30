@@ -1,6 +1,6 @@
 /* Variables
    ========================================================================== */
-$color: rgba(#000000, .54);
+$color: rgba(#000, .54);
 $purple: #7b80de;
 
 /* MISC
@@ -20,6 +20,11 @@ body {
   line-height: 1.3rem;
   color: #0e2639;
   background-color: #1d1f21;
+}
+
+::selection {
+  background: $purple;
+  color: #FFF;
 }
 
 /* Tools
