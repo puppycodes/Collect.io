@@ -9,15 +9,30 @@ let fakeNoteElement = () => {
   return e
 }
 
+let fakeLinkElement = () => {
+  let e = new Element()
+  e.type = 'link'
+  e.name = 'Grafikart.fr | Un site qu\'il est bien'
+  e.url = 'https://www.grafikart.fr'
+  e.tags = ['Tutoriel','Vidéo','Grafikart']
+  return e
+}
+
 class FakeServer implements ServerInterface {
   getInbox () {
     return new Promise((resolve, reject) => {
       resolve([
-        fakeNoteElement()
+        fakeNoteElement(),
+        fakeLinkElement()
       ])
     })
   }
 
+  addInbox (element: Element) {
+    return new Promise((resolve, reject) => {
+      resolve(element)
+    })
+  }
 }
 
 export default new FakeServer()

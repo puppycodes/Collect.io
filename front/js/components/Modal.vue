@@ -1,6 +1,7 @@
 <template>
   <div class="modal" @click="closeModal">
     <div class="modal-box" @click="preventCloseModal">
+      <div class="modal__close" @click="closeModal">x</div>
       <div class="modal__title">{{ title }}</div>
       <div class="modal__body">
         <slot></slot>

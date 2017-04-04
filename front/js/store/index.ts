@@ -18,6 +18,9 @@ const mutations = {
   },
   SET_INBOX: (state, elements: Element[]) => {
     state.inbox = elements
+  },
+  ADD_INBOX: (state, element) => {
+    state.inbox.push(element)
   }
 }
 

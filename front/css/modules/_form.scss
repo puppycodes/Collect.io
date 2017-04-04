@@ -1,0 +1,116 @@
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: $purple;
+  font-weight: 700;
+  font-size: .8rem;
+  line-height: 2rem;
+  margin-left: 1rem;
+  display: block;
+}
+
+.form-group label em {
+  color: #d8e0e6;
+  font-size: .8rem;
+  font-weight: 700;
+  &::before { content: '('; }
+  &::after { content: ')'; }
+}
+
+.form-control {
+  overflow: hidden;
+  position: relative;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #eaf1f6;
+  font-size: .9rem;
+  color: #0e2639;
+  outline: none;
+}
+
+::placeholder,
+.taggle_placeholder {
+  color: #91a1ae;
+  font-size: .95rem;
+  font-weight: 400;
+}
+
+.form-actions {
+  text-align: right;
+  margin-top: 40px;
+
+  .btn {
+    margin-left: 15px;
+  }
+}
+
+/* Tag Input
+   ========================================================================== */
+.form-control--tags {
+  padding: 1px 11px;
+}
+
+.taggle_list {
+  margin: 0;
+  padding: 0;
+}
+
+.taggle_list li {
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.taggle_list .taggle {
+  background: #d8e0e6;
+  margin: 8px 4px;
+  line-height: 14px;
+  border-radius: 20px;
+  padding: 7px 7px 7px 13px;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.taggle .close {
+  margin: 0 7px;
+  padding: 0;
+}
+
+.taggle_placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  transition: opacity, .25s;
+  user-select: none;
+}
+
+.taggle_input {
+  border: none;
+  margin: 8px 4px;
+  height: 31px;
+  float: left;
+  background: none;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  font-size: .9rem;
+  color: #0e2639;
+}
+
+.taggle_sizer {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -500px;
+  z-index: -1;
+  visibility: hidden;
+}

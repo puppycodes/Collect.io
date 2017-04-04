@@ -10,6 +10,8 @@ class Element {
 
   public content: string
 
+  public tags: string[]
+
 }
 
 export default Element

@@ -14,11 +14,26 @@
 .card__header {
   font-size: 12px;
   color: #0e2639;
-  margin-bottom: 1.7rem;
+  margin-bottom: 1rem;
 }
 
-.card__header .icon {
-  width: 12px;
-  height: 10px;
+.card__header .icon,
+.card__header img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
   color: $purple;
+}
+
+.card--link {
+  .card__body {
+    font-weight: bold;
+  }
+
+  .card__header {
+    text-transform: capitalize;
+  }
 }

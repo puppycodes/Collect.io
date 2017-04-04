@@ -5,26 +5,23 @@
       <div class="tags-filter__item">Edit Tag</div>
     </div>
     <div class="cards">
-      <div class="card" v-for="element in inbox">
-        <div class="card__header"><icon name="note"></icon> {{ element.name }}</div>
-        <div class="card__body">
-          {{ element.content }}
-        </div>
-      </div>
+      <component :key="element.name" v-bind:is="element.type + 'Card'" :element="element" v-for="element in inbox"></component>
     </div>
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
-  import Icon from '../components/Icon'
+  import NoteCard from '../components/cards/NoteCard.vue'
+  import LinkCard from '../components/cards/LinkCard.vue'
 
   export default {
     computed: {
       ...mapGetters(['inbox'])
     },
     components: {
-      Icon
+      NoteCard,
+      LinkCard
     }
   }
 </script>

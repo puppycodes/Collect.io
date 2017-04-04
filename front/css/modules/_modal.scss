@@ -29,3 +29,12 @@
   text-align: center;
   margin-bottom: 40px;
 }
+
+.modal__close {
+  position: absolute;
+  top: 45px;
+  cursor: pointer;
+  right: 40px;
+  color: #cedde8;
+  font-size: 21px;
+}
